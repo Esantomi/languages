@@ -15,5 +15,6 @@ func main() {
 	fmt.Println(A - B)
 	fmt.Println(A * B)
 	fmt.Println(A / B)
+	fmt.Println(float32(A) / float32(B))
 	fmt.Println(A % B)
 }
