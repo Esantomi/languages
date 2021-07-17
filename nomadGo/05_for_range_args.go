@@ -2,7 +2,7 @@
 // 1.5 Ffor, range, ...args //
 
 // Go의 loop는 for로만 실현된다.
-// range: array에 loop를 적용할 수 있게 해 준다.
+// range: array에 loop를 적용할 수 있게 해 주며 for문 안에서만 사용할 수 있다.
 // range는 index를 함께 준다.
 
 package main
@@ -15,11 +15,27 @@ func superAdd(numbers ...int) int { // 여러 int arguments를 받는다.
 	for idx, number := range numbers {
 		fmt.Println(idx, number)
 	}
-	// 다른 방식 loop
+
+	// ignored value (function1 참고)
+	// for _, number := range numbers {
+	// 	fmt.Println()
+	// }
+
+	return 1 // return type이 int이기 때문
+}
+
+//
+func superAdd2(numbers ...int) int {
+	다른 방식 loop
 	for i := 0; i < len(numbers); i++ {
 		fmt.Println(numbers[i])
 	}
-	return 1 // return type이 int이기 때문
+	return 1
+}
+
+//
+func superAdd3(numbers, ...int) int {
+
 }
 
 // main
