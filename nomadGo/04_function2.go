@@ -15,7 +15,7 @@ import (
 // naked return
 func lenAndUpper(name string) (length int, uppercase string) {
 	// defer는 function이 끝났을 때 추가적인 동작을 실행하게 할 수 있다.
-	defer fmt.Println("Let's go!") // defer
+	defer fmt.Println("Let's go!") // lenAndUpper()가 끝나고 실행된다.
 
 	// length는 바로 윗줄에서 이미 생성됐으므로 := 대신 =를 써서 값을 갱신해 준다.
 	length = len(name)
