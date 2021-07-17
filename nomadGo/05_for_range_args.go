@@ -1,5 +1,5 @@
 // nomadcoders 쉽고 빠른 Go 시작하기 //
-// 1.5 Ffor, range, ...args //
+// 1.5 for, range, ...args //
 
 // Go의 loop는 for로만 실현된다.
 // range: array에 loop를 적용할 수 있게 해 주며 for문 안에서만 사용할 수 있다.
