@@ -24,9 +24,8 @@ func superAdd(numbers ...int) int { // 여러 int arguments를 받는다.
 	return 1 // return type이 int이기 때문
 }
 
-//
+// range 없는 loop
 func superAdd2(numbers ...int) int {
-	다른 방식 loop
 	for i := 0; i < len(numbers); i++ {
 		fmt.Println(numbers[i])
 	}
@@ -35,10 +34,17 @@ func superAdd2(numbers ...int) int {
 
 //
 func superAdd3(numbers, ...int) int {
-
+	total := 0
+	for _, number := range numbers {
+		total += number
+	}
+	return total
 }
 
 // main
 func main() {
 	superAdd(1, 2, 3, 4, 5, 6)
+	superAdd2(1, 2, 3, 4, 5, 6)
+	result := superAdd3(1, 2, 3, 4, 5, 6)
+	fmt.Println(result)
 }
