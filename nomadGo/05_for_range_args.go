@@ -15,12 +15,6 @@ func superAdd(numbers ...int) int { // 여러 int arguments를 받는다.
 	for idx, number := range numbers {
 		fmt.Println(idx, number)
 	}
-
-	// ignored value (function1 참고)
-	// for _, number := range numbers {
-	// 	fmt.Println()
-	// }
-
 	return 1 // return type이 int이기 때문
 }
 
@@ -32,10 +26,10 @@ func superAdd2(numbers ...int) int {
 	return 1
 }
 
-//
-func superAdd3(numbers, ...int) int {
+// range로 array 값 더하기
+func superAdd3(numbers ...int) int {
 	total := 0
-	for _, number := range numbers {
+	for _, number := range numbers { // ignored value (function1 참고)
 		total += number
 	}
 	return total
@@ -43,8 +37,8 @@ func superAdd3(numbers, ...int) int {
 
 // main
 func main() {
-	superAdd(1, 2, 3, 4, 5, 6)
-	superAdd2(1, 2, 3, 4, 5, 6)
+	superAdd(1, 2, 3, 4, 5, 6)  // index와 같이 1~6 출력
+	superAdd2(1, 2, 3, 4, 5, 6) // 1, 2, 3, 4, 5, 6 출력
 	result := superAdd3(1, 2, 3, 4, 5, 6)
-	fmt.Println(result)
+	fmt.Println(result) // 21
 }
