@@ -3,6 +3,8 @@
 
 // structs //
 // map과 비슷하지만 map보다 유연하다.
+// Python의 dictionary 느낌
+
 // 먼저 struct를 정의해 줘야 한다.
 // format: type 이름 struct {}
 
@@ -21,6 +23,7 @@ func main() {
 	// struct에 value를 주는 방법은 2가지 있다.
 	// 1. {} 안에 value만 순서대로 적어 주는 방법
 	// 2. {} 안에 key:value 형태로 적어 주는 방법
+	// 두 방식 중 하나로만 통일해야 한다.
 
 	favFood := []string{"natural formula", "apple"}
 	kokam := pet{name: "kokam", age: 2, favFood: favFood} // key를 써 주는 게 clear하다.
