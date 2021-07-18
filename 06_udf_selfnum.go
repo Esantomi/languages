@@ -25,3 +25,8 @@ package main
 func main() {
 
 }
+
+func selfnum() {
+	n := 0
+	
+}
