@@ -8,7 +8,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/Esantomi/learngo/banking" // Go는 /go/src를 기본 경로로 한다.
+	"github.com/Esantomi/nomadGoProjects/banking" // Go는 /go/src를 기본 경로로 한다.
 )
 
 // main
