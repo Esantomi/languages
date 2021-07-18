@@ -8,11 +8,12 @@ import "fmt"
 // 메모리에 접근해 주소, 주소에 저장된 값 등 조회 가능
 // low-level programming을 가능하게 해 준다.
 
-// &: 포인터(pointer) 변수의 메모리 주소 전달
-// *: 디리퍼런싱(dereferencing). 주소에 값을 쓸 때 사용
-// *를 type 앞에 쓰면 parameter가 포인터임을 표시 (look through)
-// e.g. func say(msg *string) {}:
-// 이때의 msg는 string이 아닌 string을 갖는 메모리 주소
+// &: 변수의 메모리 주소(address) 전달 (e.g. 0xc00018c008)
+// *(ampersand) = 주소(address)의 값을 see through
+// *주소 = 값: 디리퍼런싱(dereferencing). 주소에 직접 값을 쓸 때 사용 (아래 참고)
+
+// *를 type 앞에 쓰면 parameter가 포인터임을 표시 (e.g. func say(msg *string) {})
+// 위의 예시에서 msg는 string이 아닌 string을 갖는 메모리 주소가 된다.
 
 // main
 func main() {
@@ -27,11 +28,20 @@ func main() {
 	fmt.Println(*bb) // 2
 	aa = 10
 	fmt.Println(*bb) // 10 (aa = 10 재할당 때문)
-	// *bb는 bb의 값, bb의 값은 aa의 메모리 주소, 따라서 10
+	// *bb는 bb의 값(look through), bb의 값은 aa의 메모리 주소, 따라서 10
 
+	// dereferencing
+	*bb = 20        // bb를 look through하면 aa의 주소
+	fmt.Println(aa) // 20 (aa의 주소를 dereferencing 했으므로)
+
+	// 값들 출력 및 조회
 	fmt.Println(a, b)   // 10 2
 	fmt.Println(&a, &b) // 0xc000016118 0xc000016140 (메모리 주소 다름)
 
 	fmt.Println(aa, bb)  // 10 0xc000016148
 	fmt.Println(&aa, bb) // 0xc000016148 0xc000016148 (주소가 동일함)
 }
+
+// 정리 //
+// &(ampersand): 주소(address) 반환
+// *: 주소에 저장된 값 반환 (dereferencing: 변경도 가능)
