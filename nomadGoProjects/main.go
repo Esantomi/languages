@@ -6,6 +6,8 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/Esantomi/nomadGoProjects/accounts"
 	// Go는 /go를 기본 경로로 한다. (패키지 관리)
 )
@@ -13,7 +15,7 @@ import (
 // main
 func main() {
 	account := accounts.NewAccount("kokam")
-	// fmt.Println(account)
+	fmt.Println(account) // &{kokam 0} (주소이므로 &가 붙음)
 	// account.balance = 10000
 	// balance는 Account struct의 private한 부분이므로 호출, 변경 불가
 }
