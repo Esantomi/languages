@@ -7,7 +7,7 @@ import "fmt"
 
 // 메모리에 접근해 주소, 주소에 저장된 값 등 조회 가능
 // low-level programming을 가능하게 해 준다.
-// &: 메모리 주소
+// &: 변수의 메모리 주소
 // *: 여기서부터 공부
 
 // main
@@ -23,7 +23,7 @@ func main() {
 	aa = 10
 
 	fmt.Println(a, b)    // 10 2
-	fmt.Println(&a, &b)  // 0xc000016118 0xc000016140 (메모리 주소)
-	fmt.Println(aa, bb)  // bb 주소는 aa 주소와 같다.
-	fmt.Println(&aa, bb) // 0xc000124020 0xc000124020 (주소가 동일함)
+	fmt.Println(&a, &b)  // 0xc000016118 0xc000016140 (메모리 주소 다름)
+	fmt.Println(aa, bb)  // 10 0xc000016148
+	fmt.Println(&aa, bb) // 0xc000016148 0xc000016148 (주소가 동일함)
 }
