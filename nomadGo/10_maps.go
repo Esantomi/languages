@@ -13,4 +13,9 @@ import "fmt"
 func main() {
 	kokam := map[string]string{"name": "kokam", "age": "2"}
 	fmt.Println(kokam) // map[age:2 name:kokam]
+
+	// map, range를 활용한 반복문
+	for key, value := range kokam { // ignored idx, value를 쓸 수도 있다.
+		fmt.Println(key, value)
+	}
 }
