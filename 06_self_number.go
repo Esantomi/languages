@@ -22,11 +22,29 @@
 
 package main
 
-func main() {
+import (
+	"fmt"
+	"strconv"
+)
 
+func main() {
+	a := string(1)
+	fmt.Println(a)
 }
 
-func selfnum() {
-	n := 0
-	
+// func self_num() {
+// 	n := 0
+
+// }
+
+func getDigit(number string, position int) int {
+	res := string(number[position])
+
+	numInt, err := strconv.Atoi(res)
+
+	if err != nil {
+		fmt.Printf("Fatal error")
+	}
+
+	return numInt
 }
