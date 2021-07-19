@@ -11,19 +11,70 @@
 
 // 출력 : 각 테스트 케이스마다 점수를 출력한다.
 
+// 내 코드
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 
-	var result string
+	var 입력 string
 
 	fmt.Print("퀴즈 결과를 입력하세요(예: OXOO): ")
-	fmt.Scanf("%s", &result)
+	fmt.Scanf("%s", &입력)
 
-	for
+	input_slice := strings.Split(입력, "X") // OOXOXOOOX
+	// fmt.Println(input_slice)              // [OO O OOO ]
+	// fmt.Println(len(input_slice))         // 3
+	// fmt.Println(cap(input_slice))         // 3
+
+	// fmt.Println(input_slice[0])           // OO
+	// fmt.Println(input_slice[1])           // O
+	// fmt.Println(input_slice[2])           // OOO
+	// fmt.Println(input_slice[3])           //
+
+	score := 0
+	for _, o := range input_slice {
+		length_o := len(o)                           // X로 나눈 O 연속체 각각의 길이
+		score_piece := length_o * (length_o + 1) / 2 // O 연속체 각각의 점수
+		score += score_piece                         // 전체 점수
+	}
+	println(score)
+	return
 }
+
+// 이예희님 코드
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	const O, X int = 79, 88
+
+// 	var c int
+// 	fmt.Scan(&c) // 테스트 케이스 개수를 받는다.
+
+// 	var arr []string = make([]string, c)
+// 	var score []int = make([]int, c)
+
+// 	for idx := range arr {
+// 		fmt.Scan(&arr[idx])
+// 		score[idx] = 0
+// 		var temp int = 0
+// 		for i := range arr[idx] {
+// 			if int(arr[idx][i]) == O {
+// 				temp += 1
+// 				score[idx] += temp
+// 			} else {
+// 				temp = 0
+// 			}
+// 		}
+// 		println(score[idx])
+// 	}
+// }
 
 // 조현성님 코드
 // package main
