@@ -38,15 +38,16 @@ func main() {
 
 	score := 0
 	for _, o := range input_slice {
-		length_o := len(o)                           // X로 나눈 O 연속체 각각의 길이
+		length_o := len(o) // X로 나눈 O 연속체 각각의 길이
+		// 삼각수의 합 공식
 		score_piece := length_o * (length_o + 1) / 2 // O 연속체 각각의 점수
 		score += score_piece                         // 전체 점수
 	}
-	println(score)
+	println(score) // 점수 출력
 	return
 }
 
-// 이예희님 코드
+// 이예희님 코드 //
 // package main
 
 // import "fmt"
@@ -76,7 +77,7 @@ func main() {
 // 	}
 // }
 
-// 조현성님 코드
+// 조현성님 코드 //
 // package main
 
 // import (
