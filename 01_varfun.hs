@@ -55,3 +55,35 @@ quadruple x = double double x
 quadruple x = double (double x)
 
 함수 합성: 앞서 정의한 함수를 활용해 새로운 함수를 정의  e.g. areaSquare -}
+
+
+{- 지역 정의(local definition) -}
+
+{- where절: 함수를 정의할 때 그 함수에 한정된 중간 결과를 정의하고 싶을 때 사용 -}
+heron a b c = sqrt (s * (s - a) * (s - b) * (s - c))  -- 헤론의 공식: 삼각형 세 변의 길이로 넓이 구하기
+    where                                             -- s 정의를 heron 우변의 일부로 만들기 위해 사용
+    s = (a + b + c) / 2                               -- s는 삼각형 둘레의 절반
+
+areaTriangleTrig  a b c = c * height / 2  -- use trigonometry(삼각법)
+    where
+    cosa   = (b ^ 2 + c ^ 2 - a ^ 2) / (2 * b * c)
+    sina   = sqrt (1 - cosa ^ 2)
+    height = b * sina
+
+areaTriangleHeron a b c = result          -- use Heron's formula
+    where
+    result = sqrt (s * (s - a) * (s - b) * (s - c))
+    s      = (a + b + c) / 2
+
+{- 스코프(scope): 함수 내에 정의된 변수는 외부에는 영향 x
+가령 아래의 GHCi 시퀀스에서 넓이는 0이 반환되지 않는다. 변수 r과 함수의 argument r이 다르기 때문이다.
+let r = 0
+let area r = pi * r ^ 2
+area 5  -- 78.53981633974483 -}
+
+
+{- 요약
+변수는 값을 저장한다. 값은 임의의 하스켈 표현식이다.
+변수는 스코프 내에서 변하지 않는다.
+함수는 재사용 가능한 코드 작성을 돕는다.
+함수는 하나보다 많은 인자를 취할 수 있다. -}
