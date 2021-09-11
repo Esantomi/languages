@@ -1,5 +1,5 @@
 # prolog
-what I've learnt about prolog language.
+What I've learnt about prolog language.
 
 ### A Prolog Haiku:
 
