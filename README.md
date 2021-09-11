@@ -1,2 +1,5 @@
-# lisp
-exercise codes of lisp. mainly common lisp
+# clisp
+what I've learnt about clisp(common lisp)
+
+## References
+- Conrad Barski, 『Land of Lisp』
