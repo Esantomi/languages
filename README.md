@@ -1,2 +1,2 @@
 # R-practice
-R programming practice
+what I've learnt about R language
