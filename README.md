@@ -2,7 +2,7 @@
 What I've learnt about programming languages.
 
 ## List of Languages
-- R
+- C
 - Clisp (common lisp)
 - Go
 - Haskell
