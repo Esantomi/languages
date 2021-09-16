@@ -1,16 +1,16 @@
 // 씹어먹는 C 언어 (modoocode.com)
-// 3. 변수가 뭐지?
+// 4-1. 계산하리
 
 #include <stdio.h>
 int main() {
+    /* 산술 연산자(arithmetic operators) */
     int a, b;
     double c;
     a = 10;
     b = 3;
-    // a = b = 5; 형식도 가능함
     c = 3;
 
-    /* 산술 연산자(arithmetic operators) */
+    /* 산술 연산자 */
     printf("a + b는 : %d \n", a + b);   // 13
     printf("a - b는 : %d \n", a - b);   // 7
     printf("a * b는 : %d \n", a * b);   // 30
@@ -23,7 +23,27 @@ int main() {
     printf("c / a는 : %f \n", c / a);  // 0.300000
     // a는 int, c는 double이지만 산술 변환으로 a가 double로 바뀌고 결괏값도 double로 바뀌었다.
 
+
     /* 대입 연산자(assignment operator) */
+    int d = 3;
+    d = d + 3;
+    printf("d의 값은 : %d \n", d);  // d의 값은 : 6
+
+    /* 더하기 1을 하는 방법 */
+    int d1, d2, d3, d4;
+    d1 = d2 = d3 = d4 = 1;  // 대입 연산자 =는 우항부터 연산해서 가능한 식
+
+    /* 대입 연산자 */
+    d1 = d1 + 1;
+    printf("d1 : %d \n", d1);  // d1 : 2
+    /* 복합 대입 연산자 */
+    d2 += 1;
+    printf("d2 : %d \n", d2);  // d2 : 2
+    /* 증감 연산자 ++ */
+    ++d3;                      // 전위형(prefix) : 1을 더하고 결과 반환
+    printf("d3 : %d \n", d3);  // d3 : 2
+    d4++;                      // 후위형(postfix) : 결과 반환 후 1을 더함
+    printf("d4 : %d \n", d4);  // d4 : 2
 
     return 0;
 }
