@@ -36,14 +36,22 @@ int main() {
     /* 대입 연산자 */
     d1 = d1 + 1;
     printf("d1 : %d \n", d1);  // d1 : 2
-    /* 복합 대입 연산자 */
+    /* 복합 대입 연산자(compound-) */
     d2 += 1;
     printf("d2 : %d \n", d2);  // d2 : 2
-    /* 증감 연산자 ++ */
+    /* 증감 연산자(increment-) ++ */
     ++d3;                      // 전위형(prefix) : 1을 더하고 결과 반환
     printf("d3 : %d \n", d3);  // d3 : 2
     d4++;                      // 후위형(postfix) : 결과 반환 후 1을 더함
     printf("d4 : %d \n", d4);  // d4 : 2
+
+    /* 전위형과 후위형의 차이점 */
+    int d5 = 1;
+    printf("++d5 : %d \n", ++d5);  // ++d5 : 2
+
+    d5 = 1;
+    printf("d5++ : %d \n", d5++);  // d5++ : 1
+    printf("d5 : %d \n", d5);      // d5 : 2
 
     return 0;
 }
