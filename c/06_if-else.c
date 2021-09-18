@@ -2,20 +2,26 @@
 // 6. 만약에...(if 문)
 
 
+// 비교(관계) 연산자 : >, <, >=, <=, ==, !=
+
 #include <stdio.h>
 int main() {
-    /* if 문 */
-    int a;
-    printf("아무 숫자나 입력하세요! : ");
-    scanf("%d", &a);
+    /* if-else 문 */
+    int num;
 
-    if (a == 7) {
-        printf("행운의 숫자 7을 입력했네요!");
+    printf("아무 숫자나 입력하세요! : ");
+    scanf("%d", &num);
+
+    if (num == 7) {
+        printf("행운의 숫자 7을 입력했네요! \n");
+    } else if (num == 4) {
+        printf("죽음의 숫자 4네요! \n");
+    } else {
+        printf("보통 숫자인 %d를 입력했네요! \n", num);
     }
 
-
     /* 나눗셈 예제 */
-    double i, j
+    double i, j;
     printf("나눌 두 정수를 입력하세요! : ");
     scanf("%lf %lf", &i, &j);
 
