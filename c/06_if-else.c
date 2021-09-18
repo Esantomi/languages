@@ -20,6 +20,7 @@ int main() {
         printf("보통 숫자인 %d를 입력했네요! \n", num);
     }
 
+
     /* 나눗셈 예제 */
     double i, j;
     printf("나눌 두 정수를 입력하세요! : ");
@@ -31,6 +32,25 @@ int main() {
     }
 
     printf("%f를 %f로 나눈 값은 : %f \n", i, j, i / j);
+
+
+    /* 평균 점수 예제 */
+    float ave_score;
+    float math, english, science, programming;
+
+    printf("수학, 영어, 과학, 프로그래밍 점수를 각각 입력해 주세요 : ");
+    scanf("%f %f %f %f", &math, &english, &science, &programming);
+
+    ave_score = (math + english + science + programming) / 4;  // 평균 점수
+    printf("당신의 평균 점수는 %f입니다. \n", ave_score);
+
+    if (ave_score >= 90) {
+        printf("우등생이시네요. \n");
+    } else if (ave_score >= 40) {
+        printf("좀 더 노력합시다. \n");
+    } else {
+        printf("공부를 안 하시네요. \n");
+    }
 
     return 0;
 }
