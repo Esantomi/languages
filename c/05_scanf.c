@@ -21,7 +21,41 @@ int main() {
     printf("섭씨 온도를 입력해 주세요 : ");
     scanf("%lf", &celsius);  // 입력 값을 long float(double)로 받아 celsius에 주소 전달
 
-    printf("섭씨 %f도는 화씨로 %f도입니다. \n", celsius, celsius * 9 / 5 + 32);
+    printf("섭씨 %f도는 화씨로 %f도입니다. \n", celsius, celsius * 9 / 5 + 32);  // scanf는 printf보다 type에 엄격하다.
+
+
+    /* scanf 총정리 */
+    /* 문자 */
+    char ch;
+
+    /* 정수 */
+    short sh;
+    int i;
+    long lo;
+
+    /* 실수 */
+    float fl;
+    double du;
+
+    /* scanf의 format 문자는 type마다 다르다. */
+    printf("char형 변수 입력 : ");
+    scanf("%c", &ch);
+
+    printf("short형 변수 입력 : ");
+    scanf("%hd", &sh);
+    printf("int형 변수 입력 : ");
+    scanf("%d", &i);
+    printf("long형 변수 입력 : ");
+    scanf("%ld", &lo);
+
+    printf("float형 변수 입력 : ");
+    scanf("%f", &fl);
+    printf("double형 변수 입력 : ");
+    scanf("%lf", &du);
+
+    /* printf의 format 문자는 좀 더 호환적이다. (정수는 %d, 실수는 %f) */
+    printf("char : %c, short : %d, int : %d", ch, sh, i);
+    printf("long : %ld, float : %f, double : %f \n", lo, fl, du);
 
     return 0;
 }
