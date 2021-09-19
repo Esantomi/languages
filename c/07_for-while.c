@@ -52,5 +52,17 @@ int main() {
         }
     }
 
+
+    /* continue 문 */
+    // break와 달리 for 문을 빠져나가는 게 아닌, PASS해 주는 역할
+
+    /* 5의 배수를 제외한 숫자 출력 */
+    // int i;
+
+    for (i = 0; i < 100; i++) {
+        if (i % 5 == 0) continue;  // 5의 배수면 실행 않고 패스
+        printf("%d ", i);
+    }
+
     return 0;
 }
