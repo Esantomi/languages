@@ -34,6 +34,16 @@ int main() {
     }
     printf("전체 과목 평균은 : %.2f \n", sum_score / subject);
 
+    /* 이중 for 문 : 구구단 */
+    // int i;
+    int j;
+
+    for (i = 1; i < 10; i++) {
+        for (j = 1; j < 10; j++) {
+            printf("%d x %d = %d \n", i, j, i * j);
+        }
+    }
+
 
     /* break 문 */
     int useranswer;
