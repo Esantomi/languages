@@ -3,6 +3,8 @@
 
 
 // 비교(관계) 연산자 : >, <, >=, <=, ==, !=
+// 논리 연산자 : &, &&, ||, !
+// Short circuit evaluation(SCE) : 한 조건을 확인했는데 전체 결과가 정해져 있다면, 뒤의 조건을 확인하지 않는 것
 
 #include <stdio.h>
 int main() {
@@ -50,6 +52,30 @@ int main() {
         printf("좀 더 노력합시다. \n");
     } else {
         printf("공부를 안 하시네요. \n");
+    }
+
+
+    /* 논리 연산자(logical operators) */
+
+    // & : 비트 사이의 AND 연산. 정확한 연산 결과를 제공해야 하므로 SCE 적용 불가
+    // 논리 곱 연산자(&&) : 참(1) 혹은 거짓(0)만 반환. 조건식 사이의 관계 표현에 사용 (SCE 적용 가능)
+
+    int a = 31, b = 15;
+    printf("a & b = %d \n", a & b);    // 15
+    printf("a && b = %d \n", a && b);  // 1
+
+    // 논리 합 연산자(||) : OR 연산
+    // 논리 부정 연산자(!) : NOT 연산. 0을 1로, 1을 0으로 반전시켜 준다.
+
+    int height, weight;
+    printf("키와 몸무게를 입력해 주세요 : ");
+    scanf("%d %d", &height, &weight);
+
+    if (height >= 190 || weight >= 100) {
+        printf("당신은 거구입니다. \n");
+    }
+    if (!(height >= 190 || weight >= 100)) {  // 190 이상, 100 이상이 아니라면
+        printf("당신은 거구가 아닙니다. \n");
     }
 
     return 0;
