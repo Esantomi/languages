@@ -19,5 +19,20 @@ int main() {
     }
     printf("1부터 19까지의 합 : %d \n", sum);  // 190
 
+    /* for 문 응용 : 점수 평균 구하기 */
+    int subject, score;
+    double sum_score = 0;
+
+    printf("과목이 총 몇 개예요? : ");
+    scanf("%d", &subject);
+
+    printf("\n 각 과목의 점수를 입력해 주세요! \n");
+    for (i = 1; i <= subject; i++) {
+        printf("과목 %d : ", i);
+        scanf("%d", &score);
+        sum_score += score;
+    }
+    printf("전체 과목 평균은 : %.2f \n", sum_score / subject);
+
     return 0;
 }
