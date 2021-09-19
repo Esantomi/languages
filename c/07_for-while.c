@@ -34,5 +34,23 @@ int main() {
     }
     printf("전체 과목 평균은 : %.2f \n", sum_score / subject);
 
+
+    /* break 문 */
+    int useranswer;
+
+    printf("컴퓨터가 생각한 수를 맞춰 보세요! \n");
+
+    // for문의 조건식이 명시되지 않으면 항상 참이 된다. (;만 2개 들어감)
+    for (;;) {
+        scanf("%d", &useranswer);
+
+        if (useranswer == 3) {
+            printf("맞췄습니다! \n");
+            break;  // 조건식과 무관하게 실행되면 무조건 for문을 종료시킨다.
+        } else {
+            printf("다시 맞춰 보세요! \n");
+        }
+    }
+
     return 0;
 }
