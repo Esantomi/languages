@@ -78,7 +78,7 @@ int main() {
 
     /* while 문 */
     i = 1;
-    // int sum = 0;
+    sum = 0;  // 이미 위에서 선언함
 
     while (i <= 100) {
         sum += i;
@@ -90,6 +90,18 @@ int main() {
 
     /* do-while 문 */
 
+    // while 문은 명령 실행 전 조건식의 TF를 먼저 검사하고, 거짓이면 실행되지 않음
+    // do-while 문은 명령을 실행한 뒤에 조건식을 검사하므로, 최소한 한 번은 실행되게 됨
     
+    i = 1;
+    sum = 0;
+
+    do {
+        sum += i;
+        i++;
+    } while (i < 1);
+
+    printf("sum : %d \n", sum);  // 1
+
     return 0;
 }
