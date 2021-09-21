@@ -34,6 +34,7 @@ int main() {
     }
     printf("전체 과목 평균은 : %.2f \n", sum_score / subject);
 
+
     /* 이중 for 문 : 구구단 */
     // int i;
     int j;
@@ -74,5 +75,16 @@ int main() {
         printf("%d ", i);
     }
 
+
+    /* while 문 */
+    int k = 1, sum2 = 0;
+
+    while (k <= 100) {
+        sum2 += k;
+        k++;
+    }
+
+    printf("1부터 100까지의 합 : %d \n", sum2);  // 5050
+    
     return 0;
 }
