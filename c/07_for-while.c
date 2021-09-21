@@ -77,14 +77,19 @@ int main() {
 
 
     /* while 문 */
-    int k = 1, sum2 = 0;
+    i = 1;
+    // int sum = 0;
 
-    while (k <= 100) {
-        sum2 += k;
-        k++;
+    while (i <= 100) {
+        sum += i;
+        i++;
     }
 
-    printf("1부터 100까지의 합 : %d \n", sum2);  // 5050
+    printf("1부터 100까지의 합 : %d \n", sum);  // 5050
+
+
+    /* do-while 문 */
+
     
     return 0;
 }
