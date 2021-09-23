@@ -13,8 +13,27 @@
 
 #include <stdio.h>
 int main() {
-    int line;
+    int line, i, j, k;
 
     printf("몇 줄짜리 역삼각형을 만드실래요? : ");
     scanf("%d", &line);
+
+    if (line <= 2) {
+        printf("최소 3줄 이상으로 합시다!");
+        } else {
+            for (i = 1; i <= line; i++) {
+                /* 공백 부분 */
+                for (j = 2; j <= i; j++) {
+                    printf(" ");
+                }
+
+                /* 별(*) 부분 */
+                for (k = 1; k <= 2 * (line - i) + 1; k++) {
+                    printf("*");
+                }
+
+                /* 줄 바꿈 */
+                printf("\n");
+            } 
+        }
 }
